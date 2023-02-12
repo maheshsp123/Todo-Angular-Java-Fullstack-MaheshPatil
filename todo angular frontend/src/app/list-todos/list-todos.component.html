@@ -1,0 +1,65 @@
+<p>list-todos works!</p>
+<div>
+    Table 4 : retriving from todo beans
+    <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+    
+    <table border="1">
+        <caption>My Table</caption>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>isDone</th>
+                <th>Update</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let todo of todoArr">
+            <td>{{todo.id}}</td>
+            <td>{{todo.username}}</td>
+            <td>{{todo.description}}</td>
+            <td>{{todo.targetDate| date | uppercase}}</td>
+            <td>{{todo.done}}</td>
+            <td> <button name="updateTodo" (click)="updateTodoBtnClick( todo.id )" class="btn btn-success">Update</button>  </td>
+            <td> <button name="deleteTodo" (click)="deleteTodoBtnClick( todo.id )" class="btn btn-warning">Delete</button>  </td>
+
+            
+        </tr>
+    </table>
+    <button name="newTodo" (click)="newTodoBtnClick()" class="btn btn-success">New Todo</button>
+
+    <br><br>
+    <table border="1">
+        <caption>My Table</caption>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                
+            </tr>
+        </thead>
+        <tr *ngFor="let todo of todos">
+            <td>{{todo.id}}</td>
+            <td>{{todo.description}}</td>
+            
+        </tr>
+    </table>
+    table 2 
+    <table border="1">
+        <caption>My Table</caption>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                
+            </tr>
+        </thead>
+        <tr *ngFor="let todo of todos1">
+            <td>{{todo.id}}</td>
+            <td>{{todo.description}}</td>
+            
+        </tr>
+    </table>
+</div>

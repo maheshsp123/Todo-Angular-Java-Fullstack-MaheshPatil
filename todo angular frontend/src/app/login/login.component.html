@@ -1,0 +1,18 @@
+<div class="container">
+    <p>welcome to login page</p>
+    <label *ngIf="msgg">{{msgg}}</label>
+    <br>
+    User Name: <input type="text" name="userName" [(ngModel)]="userName" />
+    <br>
+    Password: <input type="password" name="pswd" [(ngModel)]="pswd"/>
+    <br>
+    <!--
+    <button name="submitBtn" (click)='submitBtnClick()' class="btn btn-success">Submit</button>
+    -->
+    <!-- <button name="submitBtn" (click)='submitBtnClickBasicAuth()' class="btn btn-success">Submit</button> -->
+    <button name="submitBtn" (click)='submitBtnClickJWTAuth()' class="btn btn-success">Submit</button>
+    <br>
+    <div class="container">
+        <small *ngIf='flagg'>{{msgg}}</small>
+    </div>
+</div>
